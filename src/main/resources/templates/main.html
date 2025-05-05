@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de películas</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+          integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+    <div class="row mt-4 mb-5">
+        <h2>Búscar películas por actor</h2>
+    </div>
+
+    <form method="POST" th:action="@{/film/search}" th:object="${filmSearchForm}">
+        <div class="row">
+            <label class="col-sm-3 mt-1 fs-6 text-end">
+                Seleccione
+            </label>
+            <div class="col-sm-4">
+                <select class="form-select w-100" id="listActor" name="listActor" th:field="*{actorId}">
+                    <option selected value="0">Todas las películas</option>
+                    <option th:each="actor : ${cboActors}"
+                            th:text="${actor.actorFullName()}"
+                            th:value="${actor.actorId()}">
+                </select>
+            </div>
+            <div class="col-sm-5">
+                <button class="btn btn-primary w-25" type="submit">Buscar</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="row">
+        <table class="table table-striped table-hover mt-5">
+            <tr>
+                <th>Código</th>
+                <th>Título</th>
+                <th>Lanzamiento</th>
+                <th>Alquiler (Días)</th>
+                <th>Alquiler (Precio)</th>
+                <th>Duración (Minutos)</th>
+                <th>Actor</th>
+                <th>Acciones</th>
+            </tr>
+            <tr th:each="film : ${films}" th:if="${films != null and !films.isEmpty()}">
+                <td th:text="${ film.filmId() }"></td>
+                <td th:text="${ film.title() }"></td>
+                <td th:text="${ film.releaseYear() }"></td>
+                <td th:text="${ film.rentalDuration() }"></td>
+                <td th:text="${ film.rentalRate() }"></td>
+                <td th:text="${ film.length() }"></td>
+                <td th:text="${ film.actorFullName() }"></td>
+                <td>
+                    <a th:href="@{'/film/edit/' + ${film.filmId()}}" class="btn btn-sm btn-warning">
+                        Editar
+                    </a>
+                </td>
+            </tr>
+            <tr class="mt-1" th:if="${films == null or films.isEmpty()}">
+                <td colspan="7" class="text-center">No se encontraron películas.</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+
+<script crossorigin="anonymous"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

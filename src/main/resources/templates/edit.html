@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Película</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Editar Película</h2>
+    <form method="POST" th:action="@{/film/update}" th:object="${film}">
+        <input type="hidden" th:field="*{filmId}" />
+        <div class="mb-3">
+            <label class="form-label">Título</label>
+            <input type="text" class="form-control" th:field="*{title}" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Año de Lanzamiento</label>
+            <input type="number" class="form-control" th:field="*{releaseYear}" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Duración (minutos)</label>
+            <input type="number" class="form-control" th:field="*{length}" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Duración de alquiler (días)</label>
+            <input type="number" class="form-control" th:field="*{rentalDuration}" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Precio de alquiler</label>
+            <input type="number" step="0.01" class="form-control" th:field="*{rentalRate}" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Actor</label>
+            <select class="form-select" name="actorId">
+                <option th:each="actor : ${actors}"
+                        th:value="${actor.actorId()}"
+                        th:text="${actor.actorFullName()}"
+                        th:selected="${actor.actorId() == currentActorId}">
+                </option>
+            </select>
+        </div>
+        <div class="mt-4">
+            <button class="btn btn-primary" type="submit">Guardar</button>
+            <a th:href="@{/film/start}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>
