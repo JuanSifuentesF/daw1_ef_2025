@@ -1,4 +1,4 @@
-package pe.edu.cibertec.ef_juansifuentes.Config;
+package pe.edu.cibertec.ef_juansifuentes.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

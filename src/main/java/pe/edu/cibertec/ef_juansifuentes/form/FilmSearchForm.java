@@ -1,4 +1,4 @@
-package pe.edu.cibertec.ef_juansifuentes.Entity;
+package pe.edu.cibertec.ef_juansifuentes.form;
 
 import lombok.Data;
 

@@ -1,17 +1,17 @@
-package pe.edu.cibertec.ef_juansifuentes.Service.Implementación;
+package pe.edu.cibertec.ef_juansifuentes.service.implementación;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.edu.cibertec.ef_juansifuentes.Dto.ActorDto;
-import pe.edu.cibertec.ef_juansifuentes.Dto.FilmDto;
-import pe.edu.cibertec.ef_juansifuentes.Entity.FilmActorId;
-import pe.edu.cibertec.ef_juansifuentes.Service.FilmService;
-import pe.edu.cibertec.ef_juansifuentes.Entity.Actor;
-import pe.edu.cibertec.ef_juansifuentes.Entity.Film;
-import pe.edu.cibertec.ef_juansifuentes.Entity.FilmActor;
-import pe.edu.cibertec.ef_juansifuentes.Repository.ActorRepository;
-import pe.edu.cibertec.ef_juansifuentes.Repository.FilmActorRepository;
-import pe.edu.cibertec.ef_juansifuentes.Repository.FilmRepository;
+import pe.edu.cibertec.ef_juansifuentes.dto.ActorDto;
+import pe.edu.cibertec.ef_juansifuentes.dto.FilmDto;
+import pe.edu.cibertec.ef_juansifuentes.entity.FilmActorId;
+import pe.edu.cibertec.ef_juansifuentes.service.FilmService;
+import pe.edu.cibertec.ef_juansifuentes.entity.Actor;
+import pe.edu.cibertec.ef_juansifuentes.entity.Film;
+import pe.edu.cibertec.ef_juansifuentes.entity.FilmActor;
+import pe.edu.cibertec.ef_juansifuentes.repository.ActorRepository;
+import pe.edu.cibertec.ef_juansifuentes.repository.FilmActorRepository;
+import pe.edu.cibertec.ef_juansifuentes.repository.FilmRepository;
 
 import java.util.ArrayList;
 import java.util.Date;

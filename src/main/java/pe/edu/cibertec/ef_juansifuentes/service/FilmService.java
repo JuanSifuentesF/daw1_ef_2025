@@ -1,8 +1,8 @@
-package pe.edu.cibertec.ef_juansifuentes.Service;
+package pe.edu.cibertec.ef_juansifuentes.service;
 
-import pe.edu.cibertec.ef_juansifuentes.Dto.ActorDto;
-import pe.edu.cibertec.ef_juansifuentes.Dto.FilmDto;
-import pe.edu.cibertec.ef_juansifuentes.Entity.Film;
+import pe.edu.cibertec.ef_juansifuentes.dto.ActorDto;
+import pe.edu.cibertec.ef_juansifuentes.dto.FilmDto;
+import pe.edu.cibertec.ef_juansifuentes.entity.Film;
 
 
 public interface FilmService {

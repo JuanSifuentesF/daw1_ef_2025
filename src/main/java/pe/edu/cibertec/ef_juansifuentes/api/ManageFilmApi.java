@@ -2,8 +2,8 @@ package pe.edu.cibertec.ef_juansifuentes.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.cibertec.ef_juansifuentes.Service.FilmService;
-import pe.edu.cibertec.ef_juansifuentes.Dto.FilmActorRequest;
+import pe.edu.cibertec.ef_juansifuentes.service.FilmService;
+import pe.edu.cibertec.ef_juansifuentes.request.FilmActorRequest;
 import pe.edu.cibertec.ef_juansifuentes.response.DeleteFilmsActorResponse;
 
 import java.util.List;

@@ -1,8 +1,8 @@
-package pe.edu.cibertec.ef_juansifuentes.Repository;
+package pe.edu.cibertec.ef_juansifuentes.repository;
 
 import org.springframework.data.repository.CrudRepository;
-import pe.edu.cibertec.ef_juansifuentes.Entity.FilmActor;
-import pe.edu.cibertec.ef_juansifuentes.Entity.FilmActorId;
+import pe.edu.cibertec.ef_juansifuentes.entity.FilmActor;
+import pe.edu.cibertec.ef_juansifuentes.entity.FilmActorId;
 
 import java.util.List;
 

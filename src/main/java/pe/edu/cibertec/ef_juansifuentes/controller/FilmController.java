@@ -1,14 +1,14 @@
-package pe.edu.cibertec.ef_juansifuentes.Controller;
+package pe.edu.cibertec.ef_juansifuentes.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.cibertec.ef_juansifuentes.Dto.ActorDto;
-import pe.edu.cibertec.ef_juansifuentes.Dto.FilmDto;
-import pe.edu.cibertec.ef_juansifuentes.Entity.Film;
-import pe.edu.cibertec.ef_juansifuentes.Entity.FilmSearchForm;
-import pe.edu.cibertec.ef_juansifuentes.Service.FilmService;
+import pe.edu.cibertec.ef_juansifuentes.dto.ActorDto;
+import pe.edu.cibertec.ef_juansifuentes.dto.FilmDto;
+import pe.edu.cibertec.ef_juansifuentes.entity.Film;
+import pe.edu.cibertec.ef_juansifuentes.form.FilmSearchForm;
+import pe.edu.cibertec.ef_juansifuentes.service.FilmService;
 
 @Controller
 @RequestMapping("/film")
