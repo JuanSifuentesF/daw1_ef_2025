@@ -107,7 +107,6 @@ public class FilmServiceImpl implements FilmService {
     Film original = filmRepository.findById(updatedFilm.getFilmId())
           .orElseThrow(() -> new Exception("Película no encontrada"));
 
-    // Solo se actualizan los campos que vienen del formulario
     original.setTitle(updatedFilm.getTitle());
     original.setLength(updatedFilm.getLength());
     original.setReleaseYear(updatedFilm.getReleaseYear());
@@ -117,7 +116,6 @@ public class FilmServiceImpl implements FilmService {
 
     filmRepository.save(original);
 
-    // Actualizar relación actor-film
     filmActorRepository.deleteAll(filmActorRepository.findByFilmActorIdFilmId(original.getFilmId()));
     Actor actor = actorRepository.findById(actorId)
           .orElseThrow(() -> new Exception("Actor no encontrado"));
