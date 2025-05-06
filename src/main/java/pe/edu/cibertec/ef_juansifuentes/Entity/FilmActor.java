@@ -1,6 +1,4 @@
 package pe.edu.cibertec.ef_juansifuentes.Entity;
-
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

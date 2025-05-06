@@ -3,7 +3,7 @@ package pe.edu.cibertec.ef_juansifuentes.Service;
 import pe.edu.cibertec.ef_juansifuentes.Dto.ActorDto;
 import pe.edu.cibertec.ef_juansifuentes.Dto.FilmDto;
 import pe.edu.cibertec.ef_juansifuentes.Entity.Film;
-import pe.edu.cibertec.ef_juansifuentes.Entity.FilmActorId;
+
 
 public interface FilmService {
   Iterable<ActorDto> getActors() throws Exception;

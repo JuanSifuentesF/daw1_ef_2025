@@ -97,7 +97,7 @@ public class FilmServiceImpl implements FilmService {
   public int getActorIdByFilmId(int filmId) throws Exception {
     List<FilmActor> relaciones = filmActorRepository.findByFilmActorIdFilmId(filmId);
     if (!relaciones.isEmpty()) {
-      return relaciones.get(0).getActor().getActorId(); // Suponemos un actor por película
+      return relaciones.get(0).getActor().getActorId();
     }
     return 0;
   }
@@ -135,11 +135,10 @@ public class FilmServiceImpl implements FilmService {
   public void deleteFilmWithActor(int filmId, int actorId) throws Exception {
     FilmActorId filmActorId = new FilmActorId(actorId, filmId);
 
-    // Verificamos si existe la relación
     if (filmActorRepository.existsById(filmActorId)) {
       filmActorRepository.deleteById(filmActorId);
     }
-    // Si no existe, simplemente no hacemos nada (no es un error)
+
   }
 
 
